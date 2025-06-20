@@ -1,0 +1,89 @@
+PASO 1 (En carpeta)
+docker build -t mysql-cdy2203-2025 .    (docker build -t sonarqube-custom -f DockerfileSonar .) Comando para especificar un dockerfile en particular
+
+PASO 2 (En carpeta)
+docker run -d -p 3306:3306 --name mysql-cdy2203-2025 mysql-cdy2203-2025
+
+PASO 3(En dockers): 
+mysql -u myuser -p  (passowrd)
+
+PASO 4(CORRER CODIGO PARA CREACION DE TABLAS EN DOCKERS):
+
+VER INSTANCIAS DE DOCKERS:
+
+docker ps -a    -> PARA DETENER X NOMBRE: docker stop unruffled_darwin  
+
+PARA CORRER
+
+desc user
+
+insert into user values(1,'javier@gmail.com','12345','cdy2203');
+
+
+
+
+
+
+
+TALLER 2
+
+.\mvnw clean install -DskipTests (Dentro de la carpeta del proyecto) BORRAR TARGET
+
+docker build -t backend .
+
+docker run -d -p 8180:8180 --name backend-app backend
+
+
+docker network create backend_network
+
+docker network connect backend_network mysql-cdy2203-2025
+
+docker network connect backend_network backend-app
+
+
+--parte 2
+
+docker-compose.yaml (de greenbone para openvas)
+
+Docker compose up -d
+
+deglosamos contenedor de openvas y buscamos openvasd-1  (greenbone-community-edition-openvasd-1)
+
+docker network connect backend_network greenbone-community-edition-openvasd-1
+
+buscamos ospd-openvas-1 
+
+docker network connect backend_network greenbone-community-edition-ospd-openvas-1
+
+recuperamos IP (DE LA RED) backend_network
+
+172.19.0.3
+
+vamos a http://localhost:9392/login
+
+admin admin
+
+hay que ir a administration / feed status para ver si está todo ok
+
+parte 3
+
+
+
+
+
+
+
+
+
+Cómo conectar contenedores a través de la creación de redes y conectar los contenedores a ellas (docker network .....)
+y también de generar el archivo .jar que se sube al contenedor usando mvn
+Otro tema que seria bueno abordar son las pruebas unitarias, que van a desarrollar en la experiencia 3 que comienzan la próxima semana
+
+
+
+
+
+
+
+
+
