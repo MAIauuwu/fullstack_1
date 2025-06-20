@@ -1,4 +1,4 @@
-package com.duoc.backend.DTO;
+package com.duoc.backend.Llamado;
 
 
 import org.springframework.data.repository.CrudRepository;

@@ -3,14 +3,13 @@ package com.duoc.backend.TipoDeUsuario;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tipo usuarios")
+@Table(name = "tipo_usuario")
 
 public class TipoDeUsuario {
 
     @Id
-
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_TipoDeUsuario;
+    private Long idTipoDeUsuario;
     private String tipoUsuario;
     private String descripcion;
     public TipoDeUsuario() {
@@ -23,12 +22,12 @@ public class TipoDeUsuario {
 
 
     // Getters and Setters
-    public Long getId_TipoDeUsuario() {
-        return id_TipoDeUsuario;
+    public Long getIdTipoDeUsuario() {
+        return idTipoDeUsuario;
     }
 
-    public void setId_TipoDeUsuario(Long id_TipoDeUsuario) {
-        this.id_TipoDeUsuario = id_TipoDeUsuario;
+    public void setIdTipoDeUsuario(Long idTipoDeUsuario) {
+        this.idTipoDeUsuario = idTipoDeUsuario;
     }
 
     public String getTipoUsuario() {
@@ -50,7 +49,7 @@ public class TipoDeUsuario {
     @Override
     public String toString() {
         return "TipoDeUsuario{" +
-                "id=" + id_TipoDeUsuario +
+                "id=" + idTipoDeUsuario +
                 ", tipoUsuario='" + tipoUsuario + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 '}';

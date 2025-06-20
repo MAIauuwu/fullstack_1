@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Comisaria {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idComisaria;
     private String nombre;
     private String ubicacion;
@@ -30,7 +30,7 @@ public class Comisaria {
         this.nombre = nombre;
     }
 
-    public String getUbicacion(String ubicacion){
+    public String getUbicacion(){
         return ubicacion;
     }
 

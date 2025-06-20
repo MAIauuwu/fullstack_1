@@ -15,9 +15,8 @@ import org.slf4j.LoggerFactory;
 
 
 
-@Configuration
 @Service
-public class MyUserDetailsService implements UserDetailsService {
+public class MyUserDetailsService {
 
         Logger logger
         = LoggerFactory.getLogger(MyUserDetailsService.class);
@@ -26,7 +25,6 @@ public class MyUserDetailsService implements UserDetailsService {
     private UserRepository userRepository;
 
 
-    @Override
     public UserDetails loadUserByUsername(String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {
@@ -35,8 +33,8 @@ public class MyUserDetailsService implements UserDetailsService {
         return user;
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
-    }
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 }
