@@ -20,12 +20,6 @@ public class CuadranteController {
 
     @Autowired
     private CuadranteService cuadranteService;
-
-    @GetMapping("/register")
-    public String greetings(@RequestParam(value="name", defaultValue="World") String name) {
-        return "Hello {" + name + "}";
-    }
-
     @GetMapping
     public List<Cuadrante> getAllcuadrantes() {
         return (List<Cuadrante>) cuadranteService.getAllCuadrante();
@@ -46,8 +40,6 @@ public class CuadranteController {
     cuadrante.setId(id);
     return cuadranteService.saveCuadrante(cuadrante);
 }
-
-
     @DeleteMapping("/{id}")
     public void deleteCuadrante(@PathVariable Long id) {
         cuadranteService.deleteCuadrante(id);
