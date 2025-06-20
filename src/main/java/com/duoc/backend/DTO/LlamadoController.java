@@ -13,7 +13,6 @@ public class LlamadoController {
 
     @PostMapping("/llamar")
     public ResponseEntity<String> llamarComisaria(@RequestBody LlamadoDTO dto) {
-        // Aquí se podría agregar lógica de notificación real (correo, SMS, etc.)
         String mensaje = "Llamado de emergencia desde " + dto.getRutUsuario() +
                 " en lat: " + dto.getLatitud() + ", lng: " + dto.getLongitud();
         System.out.println(mensaje);

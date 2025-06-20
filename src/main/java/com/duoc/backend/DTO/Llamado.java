@@ -15,7 +15,7 @@ public class Llamado {
     private LocalDateTime fechaHora;
 
     public Llamado() {
-        this.fechaHora = LocalDateTime.now(); // se genera automáticamente
+        this.fechaHora = LocalDateTime.now();
     }
 
     // Getters y setters

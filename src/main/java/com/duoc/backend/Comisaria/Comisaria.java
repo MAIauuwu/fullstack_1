@@ -1,9 +1,11 @@
 package com.duoc.backend.Comisaria;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Comisaria {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

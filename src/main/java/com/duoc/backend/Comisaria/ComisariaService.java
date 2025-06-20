@@ -1,8 +1,9 @@
 package com.duoc.backend.Comisaria;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ComisariaService {
     @Autowired
     private ComisariaRepository comisariaRepository;
