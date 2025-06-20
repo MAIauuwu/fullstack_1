@@ -1,4 +1,4 @@
-package com.duoc.backend.DTO;
+package com.duoc.backend.Llamado;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

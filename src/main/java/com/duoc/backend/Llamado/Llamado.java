@@ -1,4 +1,4 @@
-package com.duoc.backend.DTO;
+package com.duoc.backend.Llamado;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

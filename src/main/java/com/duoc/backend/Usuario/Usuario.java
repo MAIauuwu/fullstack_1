@@ -4,7 +4,7 @@ import com.duoc.backend.TipoDeUsuario.TipoDeUsuario;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 public class Usuario {
 
     @Id

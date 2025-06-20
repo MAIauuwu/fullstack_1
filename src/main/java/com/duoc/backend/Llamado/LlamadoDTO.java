@@ -1,4 +1,4 @@
-package com.duoc.backend.DTO;
+package com.duoc.backend.Llamado;
 
 public class LlamadoDTO {
     private String rutUsuario;
