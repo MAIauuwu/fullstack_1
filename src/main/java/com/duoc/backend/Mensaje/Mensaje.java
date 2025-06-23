@@ -1,6 +1,10 @@
 package com.duoc.backend.Mensaje;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -13,6 +17,7 @@ public class Mensaje {
     private double latitud;
     private double longitud;
     private LocalDateTime fechaHora;
+    private String ip; // nuevo campo
 
     public Mensaje() {
         this.fechaHora = LocalDateTime.now();
@@ -32,4 +37,7 @@ public class Mensaje {
 
     public LocalDateTime getFechaHora() { return fechaHora; }
     public void setFechaHora(LocalDateTime fechaHora) { this.fechaHora = fechaHora; }
+
+    public String getIp() { return ip; }
+    public void setIp(String ip) { this.ip = ip; }
 }
