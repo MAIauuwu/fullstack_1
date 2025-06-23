@@ -6,8 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "tipo_usuario")
 
 public class TipoDeUsuario {
-
-    public Long getidTipoDeUsuario;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idTipoDeUsuario;

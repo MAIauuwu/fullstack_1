@@ -38,7 +38,7 @@ public class TipoDeUsuarioController {
         );
 
     }
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     public ResponseEntity<EntityModel<TipoDeUsuario>> getTipoDeUsuarioById(@PathVariable Long id_TipoDeUsuario) {
         Optional<TipoDeUsuario> tipoDeUsuarioOptional = tipoDeUsuarioRepository.findById(id_TipoDeUsuario);
 
@@ -49,9 +49,9 @@ public class TipoDeUsuarioController {
         }
     }
     @PostMapping
-    public EntityModel<TipoDeUsuario> saveTipoDeUsuario(@PathVariable TipoDeUsuario tipoDeUsuario) {
-    TipoDeUsuario guardado = tipoDeUsuarioRepository.save(tipoDeUsuario);
-    return assembler.toModel(guardado);
+    public ResponseEntity<EntityModel<TipoDeUsuario>> saveTipoDeUsuario(@RequestBody TipoDeUsuario tipoDeUsuario) {
+        TipoDeUsuario guardado = tipoDeUsuarioRepository.save(tipoDeUsuario);
+        return ResponseEntity.ok(assembler.toModel(guardado));
     }
 
     @DeleteMapping("/{id}")
