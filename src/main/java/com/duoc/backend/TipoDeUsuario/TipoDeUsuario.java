@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 
 public class TipoDeUsuario {
 
+    public Long getidTipoDeUsuario;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idTipoDeUsuario;

@@ -1,6 +1,5 @@
 package com.duoc.backend.Comisaria;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
